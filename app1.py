@@ -21,5 +21,11 @@ def translate(w):
 
 word = input("Enter word: ")
 
-
-print (translate(word))
+output = translate(word)
+if type(output) == list:
+    print ("\nDefinition(s): \n")
+    for item in output:
+        print (item + "\n")
+    print ("Done\n")
+else:
+    print (output)
